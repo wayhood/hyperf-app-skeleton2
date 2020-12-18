@@ -1,2 +1,10 @@
 # hyperf-app-skeleton2
-hyperf-app-skeleton2
+
+详情
+=====
+[https://github.com/wayhood/hyperf-action2]
+
+地址
+=====
+* http://localhost:9501/ 接口地址
+* http://localhost:9501/doc  文档地址
