@@ -2,7 +2,7 @@
 
 详情
 =====
-[https://github.com/wayhood/hyperf-action2]
+[https://github.com/wayhood/hyperf-action]
 
 地址
 =====
