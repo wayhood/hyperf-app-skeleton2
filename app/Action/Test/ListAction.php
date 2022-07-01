@@ -8,11 +8,13 @@ use Wayhood\HyperfAction\Annotation\Action;
 use Wayhood\HyperfAction\Annotation\Category;
 use Wayhood\HyperfAction\Annotation\Description;
 use Wayhood\HyperfAction\Annotation\RequestParam;
+use Wayhood\HyperfAction\Annotation\RequestValidate;
 use Wayhood\HyperfAction\Annotation\ResponseParam;
 use Wayhood\HyperfAction\Annotation\Usable;
 use Wayhood\HyperfAction\Annotation\ErrorCode;
 use Wayhood\HyperfAction\Annotation\Token;
 use Wayhood\HyperfAction\Action\AbstractAction;
+use App\Validate\Test\ListValidate;
 
 /**
  * @Action("test.list")
@@ -28,6 +30,7 @@ use Wayhood\HyperfAction\Action\AbstractAction;
  * 请求参数
  * 格式:  name="名称",  type="类型", require=是否必须, example=示例值, description="描述"
  * 简写:  n="名称",  t="类型", r=是否必须, e=示例值, d="描述"
+ * @RequestValidate(validate=ListValidate::class)
  * @RequestParam(name="start", type="int", require=false, example=0, description="起始位置, 默认从0开始")
  * @RequestParam(n="limit",    t="int", r=false, e=10,  d="获取记录条数, 默认10条")
  *
