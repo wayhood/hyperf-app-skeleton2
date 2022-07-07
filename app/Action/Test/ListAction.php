@@ -14,7 +14,6 @@ use Wayhood\HyperfAction\Annotation\Usable;
 use Wayhood\HyperfAction\Annotation\ErrorCode;
 use Wayhood\HyperfAction\Annotation\Token;
 use Wayhood\HyperfAction\Action\AbstractAction;
-use App\Validate\Test\ListValidate;
 
 /**
  * @Action("test.list")

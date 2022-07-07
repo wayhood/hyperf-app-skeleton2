@@ -37,7 +37,8 @@
         "hyperf/model-cache": "~2.2.0",
         "hyperf/elasticsearch": "~2.2.0",
         "hyperf/tracer": "~2.2.0",
-        "wayhood/hyperf-action": "^2.2.0-dev"
+        "wayhood/hyperf-action": "^2.2.0-dev",
+        "hyperf/paginator": "^2.2"
     },
     "require-dev": {
         "swoole/ide-helper": "^4.5",
