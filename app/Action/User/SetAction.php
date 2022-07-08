@@ -35,9 +35,7 @@ use Wayhood\HyperfAction\Annotation\Usable;
  * @RequestParam(n="password",t="string",r=false,e="xxxx",d="密码")
  * @RequestParam(n="avatar",t="string",r=false,e="xxxx",d="头像")
  * @RequestParam(n="is_lock",t="string",r=false,e="xxxx",d="账号状态")
- * @RequestParam(n="created_at",t="string",r=false,e="2022-07-07 16:48:27",d="创建时间")
- * @RequestParam(n="updated_at",t="string",r=false,e="2022-07-07 16:48:27",d="更新时间")
- * @RequestParam(n="ids",t="array",r=false,e="[1,2,3]",d="会员表 ids")
+ * @RequestParam(n="ids",t="array",r=true,e="[1,2,3]",d="会员表 ids")
 
  *
  * 响应参数
@@ -48,10 +46,8 @@ use Wayhood\HyperfAction\Annotation\Usable;
  * @ResponseParam(n="password",                t="string",    e="xxx",     d="密码")
  * @ResponseParam(n="avatar",                t="string",    e="xxx",     d="头像")
  * @ResponseParam(n="is_lock",                t="string",    e="xxx",     d="账号状态")
- * @ResponseParam(n="created_at",                t="string",    e="2020-07-01 12:00:00",     d="创建时间")
- * @ResponseParam(n="updated_at",                t="string",    e="2020-07-01 12:00:00",     d="更新时间")
  * @ResponseParam(n="status",                t="bool",    e="true",     d="是否成功")
-%
+
  *
  * 错误代码
  * 格式: code=错误代码, message="描述"
@@ -74,6 +70,6 @@ class SetAction extends AbstractAction
 
     public function run($params, $extras, $headers)
     {
-        return $this->service->set($params);
+        return $this->successReturn($this->service->set($params));
     }
 }

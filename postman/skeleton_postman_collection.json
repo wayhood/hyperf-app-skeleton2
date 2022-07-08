@@ -1,0 +1,192 @@
+{
+    "info": {
+        "name": "skeleton",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "测试",
+            "item": [
+                {
+                    "name": "测试请求 test.get",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{skeleton_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"dispatch\": \"test.get\",\n        \"params\": {\n            \"search\": \"{}\",\n            \"ids\": [],\n            \"username\": \"xxx\",\n            \"password\": \"xxx\"\n        }\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{skeleton_host}}",
+                            "host": [
+                                "{{skeleton_host}}"
+                            ]
+                        },
+                        "response": []
+                    }
+                },
+                {
+                    "name": "测试列表 test.list",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{skeleton_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"dispatch\": \"test.list\",\n        \"params\": {\n            \"start\": 0,\n            \"limit\": 10\n        }\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{skeleton_host}}",
+                            "host": [
+                                "{{skeleton_host}}"
+                            ]
+                        },
+                        "response": []
+                    }
+                }
+            ]
+        },
+        {
+            "name": "会员表",
+            "item": [
+                {
+                    "name": "删除|批量删除 User.Del",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{skeleton_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"dispatch\": \"User.Del\",\n        \"params\": {\n            \"ids\": [\n                1,\n                2,\n                3\n            ]\n        }\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{skeleton_host}}",
+                            "host": [
+                                "{{skeleton_host}}"
+                            ]
+                        },
+                        "response": []
+                    }
+                },
+                {
+                    "name": "搜索 User.Search",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{skeleton_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"dispatch\": \"User.Search\",\n        \"params\": {\n            \"search\": {\n                \"id\": [\n                    \">|<|!=|=\",\n                    123\n                ],\n                \"username\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"nickname\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"password\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"avatar\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"is_lock\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"created_at\": [\n                    \"start_date\",\n                    \"end_date\"\n                ],\n                \"updated_at\": [\n                    \"start_date\",\n                    \"end_date\"\n                ]\n            },\n            \"per_page\": 10,\n            \"page\": 1\n        }\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{skeleton_host}}",
+                            "host": [
+                                "{{skeleton_host}}"
+                            ]
+                        },
+                        "response": []
+                    }
+                },
+                {
+                    "name": "获取单条数据 User.Get",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{skeleton_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"dispatch\": \"User.Get\",\n        \"params\": {\n            \"search\": {\n                \"id\": [\n                    \">|<|!=|=\",\n                    123\n                ],\n                \"username\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"nickname\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"password\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"avatar\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"is_lock\": [\n                    \"like|=\",\n                    \"xxx\"\n                ],\n                \"created_at\": [\n                    \"start_date\",\n                    \"end_date\"\n                ],\n                \"updated_at\": [\n                    \"start_date\",\n                    \"end_date\"\n                ]\n            },\n            \"per_page\": 10,\n            \"page\": 1\n        }\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{skeleton_host}}",
+                            "host": [
+                                "{{skeleton_host}}"
+                            ]
+                        },
+                        "response": []
+                    }
+                },
+                {
+                    "name": "批量修改或新增 User.Set",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "{{skeleton_token}}",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": {\n        \"dispatch\": \"User.Set\",\n        \"params\": {\n            \"username\": \"xxxx\",\n            \"nickname\": \"xxxx\",\n            \"password\": \"xxxx\",\n            \"avatar\": \"xxxx\",\n            \"is_lock\": \"xxxx\",\n            \"created_at\": \"2022-07-07 16:48:27\",\n            \"updated_at\": \"2022-07-07 16:48:27\",\n            \"ids\": [\n                1,\n                2,\n                3\n            ]\n        }\n    }\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{skeleton_host}}",
+                            "host": [
+                                "{{skeleton_host}}"
+                            ]
+                        },
+                        "response": []
+                    }
+                }
+            ]
+        }
+    ]
+}

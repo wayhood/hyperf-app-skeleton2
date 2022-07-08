@@ -37,8 +37,6 @@ use Wayhood\HyperfAction\Annotation\Usable;
  * @RequestParam(n="search.password",t="array",r=false,e="['like|=','xxx']",d="密码")
  * @RequestParam(n="search.avatar",t="array",r=false,e="['like|=','xxx']",d="头像")
  * @RequestParam(n="search.is_lock",t="array",r=false,e="['like|=','xxx']",d="账号状态")
- * @RequestParam(n="search.created_at",t="array",r=false,e="['start_date','end_date']",d="创建时间")
- * @RequestParam(n="search.updated_at",t="array",r=false,e="['start_date','end_date']",d="更新时间")
  * @RequestParam(n="per_page",t="int",r=false,e="10",d="每页数量")
  * @RequestParam(n="page",t="int",r=false,e="1",d="当前多少页")
 
@@ -54,7 +52,7 @@ use Wayhood\HyperfAction\Annotation\Usable;
  * @ResponseParam(n="is_lock",                t="string",    e="xxx",     d="账号状态")
  * @ResponseParam(n="created_at",                t="string",    e="2020-07-01 12:00:00",     d="创建时间")
  * @ResponseParam(n="updated_at",                t="string",    e="2020-07-01 12:00:00",     d="更新时间")
-%
+
  *
  * 错误代码
  * 格式: code=错误代码, message="描述"
@@ -77,6 +75,6 @@ class GetAction extends AbstractAction
 
     public function run($params, $extras, $headers)
     {
-        return $this->service->get($params);
+        return $this->successReturn($this->service->get($params));
     }
 }

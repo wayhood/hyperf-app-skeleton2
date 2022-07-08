@@ -29,7 +29,6 @@ use Wayhood\HyperfAction\Action\AbstractAction;
  * 请求参数
  * 格式:  name="名称",  type="类型", require=是否必须, example=示例值, description="描述"
  * 简写:  n="名称",  t="类型", r=是否必须, e=示例值, d="描述"
- * @RequestValidate(validate=Classa::class)
  * @RequestParam(name="nick", type="string", require=true, example="test", description="用户昵称")
  * @RequestParam(n="a",       t="string", r=true, e="a",  d="请求参数a")
  * @RequestParam(n="b",       t="int",   r=true, e=1,   d="请求参数b")

@@ -53,7 +53,7 @@ class User extends AbstractService
     // 根据ids批量更改或者单条更改数据
     public function set($params)
     {
-        $ids = $params['ids']??[];
+        $ids = $params['ids'];
         $data = Arr::except($params,'ids');
         $result = $this->update($ids,$data);
         return [

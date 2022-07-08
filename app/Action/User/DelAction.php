@@ -37,7 +37,7 @@ use Wayhood\HyperfAction\Annotation\Usable;
  * 格式:  name="名称",  type="类型", example=示例值, description="描述"
  * 简写:  n="名称",  t="类型", e=示例值, d="描述"
  * @ResponseParam(n="status",                t="bool",    e="true",     d="是否成功")
-%
+
  *
  * 错误代码
  * 格式: code=错误代码, message="描述"
@@ -60,6 +60,6 @@ class DelAction extends AbstractAction
 
     public function run($params, $extras, $headers)
     {
-        return $this->service->delete($params);
+        return $this->successReturn($this->service->delete($params));
     }
 }
